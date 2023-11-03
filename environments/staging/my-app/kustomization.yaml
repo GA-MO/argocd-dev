@@ -2,7 +2,7 @@
 namespace: staging
 replicas:
   - name: static-web-deployment
-    count: 2
+    count: 3
 images:
   - name: thawatchaik/nginx-demo
     newTag: v0.1.0

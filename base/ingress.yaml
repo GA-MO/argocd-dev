@@ -8,7 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules: # ส่วนของการกำหนด Rule ให้กับ Ingress
-  - host: "uat.local" # Hostname ที่จะให้ User เข้าใช้งาน
+  - host: "localhost" # Hostname ที่จะให้ User เข้าใช้งาน
     http:
       paths:
       - path: /demo-web # Path ที่จะให้เข้ามาใช้งาน Pod

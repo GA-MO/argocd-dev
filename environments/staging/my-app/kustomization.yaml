@@ -1,7 +1,7 @@
 ---
 namespace: staging
 replicas:
-  - name: nginx-deployment
+  - name: static-web-deployment
     count: 2
 images:
   - name: thawatchaik/nginx-demo

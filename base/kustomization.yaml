@@ -3,6 +3,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
   name: arbitrary
+
 resources:
-  - deployment.yaml
-  - namespace.yaml
+- ingress.yaml
+- service.yaml
+- deployment.yaml
+
+patchesStrategicMerge:
+- ingress.yaml.patch

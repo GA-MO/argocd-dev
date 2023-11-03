@@ -1,16 +1,20 @@
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: localhost-ingress
+  name: my-service-ingress
+  namespace: staging
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  rules:
-  - http:
+  rules: # ส่วนของการกำหนด Rule ให้กับ Ingress
+  - host: "uat.local" # Hostname ที่จะให้ User เข้าใช้งาน
+    http:
       paths:
-      - path: /*
-        pathType: Prefix
-        backend:
+      - path: /demo-web # Path ที่จะให้เข้ามาใช้งาน Pod
+        pathType: Prefix # ประเภทของการ Match Path
+        backend: # ส่วนของการระบุ Service ที่จะให้นำทางไปยัง Pod
           service:
-            name: my-service
+            name: my-service # ชื่อของ Service
             port:
-              name: http
+              number: 80 #  Port ของ Service

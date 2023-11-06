@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - thawatchaik/nginx-demo:v0.1.3

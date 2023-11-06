@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-web-static
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: demo-web-static
+  template:
+    metadata:
+      labels:
+        app: demo-web-static
+    spec:
+      containers:
+      - image: yeasy/simple-web:latest
+        name: demo-web-static
+        ports:
+        - containerPort: 80

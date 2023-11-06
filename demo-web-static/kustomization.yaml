@@ -8,5 +8,5 @@ images:
     newTag: v0.1.0
 resources:
 - ./configurations/ingress.yaml
-- ./configurations/service.yaml
+- ./configurations/sv.yaml
 - ./configurations/deployment.yaml

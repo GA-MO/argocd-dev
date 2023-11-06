@@ -16,6 +16,5 @@ spec:
       containers:
       - image: thawatchaik/nginx-demo
         name: demo-web-static
-        newTag: v0.1.0
         ports:
         - containerPort: 80

@@ -11,7 +11,7 @@ spec:
   - host: "localhost" # Hostname ที่จะให้ User เข้าใช้งาน
     http:
       paths:
-      - path: /demo-web # Path ที่จะให้เข้ามาใช้งาน Pod
+      - path: /demo-web-static # Path ที่จะให้เข้ามาใช้งาน Pod
         pathType: Prefix # ประเภทของการ Match Path
         backend: # ส่วนของการระบุ Service ที่จะให้นำทางไปยัง Pod
           service:

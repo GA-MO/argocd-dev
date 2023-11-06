@@ -7,6 +7,6 @@ images:
   - name: thawatchaik/nginx-demo
     newTag: v0.1.0
 resources:
-- ./configurations/ingress.yaml
-- ./configurations/sv.yaml
-- ./configurations/deployment.yaml
+- ingress.yaml
+- sv.yaml
+- deployment.yaml

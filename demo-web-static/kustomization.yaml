@@ -4,13 +4,12 @@ kind: Kustomization
 images:
 - name: thawatchaik/nginx-demo
   newTag: 0.0.1
-# Annotations for Argo CD Image Updater
+resources:
+- ./resources/ingress.yaml
+- ./resources/sv.yaml
+- ./resources/deployment.yaml
 annotations:
   argocd-image-updater.argoproj.io/image-list: thawatchaik/nginx-demo:~v0.1
   argocd-image-updater.argoproj.io/nginx.kustomize.image-name: thawatchaik/nginx-demo
   argocd-image-updater.argoproj.io/write-back-method: git
   argocd-image-updater.argoproj.io/write-back-target: kustomization
-resources:
-- ./resources/ingress.yaml
-- ./resources/sv.yaml
-- ./resources/deployment.yaml

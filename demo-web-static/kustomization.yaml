@@ -5,5 +5,5 @@ images:
   newTag: v0.1.3
 resources:
 - ./resources/ingress.yaml
-# - ./resources/sv.yaml
+- ./resources/sv.yaml
 - ./resources/deployment.yaml

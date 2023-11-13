@@ -3,7 +3,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: dev
+    namespace: develop
     name: kind
   project: default
   sources:

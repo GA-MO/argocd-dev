@@ -2,12 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app-of-apps
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    name: in-cluster
-    namespace: argocd
+    server: https://kubernetes.default.svc
+    namespace: develop
   source:
-    path: applications
+    path: app-of-apps/applications
     repoURL: https://github.com/GA-MO/argocd-dev
     targetRevision: HEAD
     directory:

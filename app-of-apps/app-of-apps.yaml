@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: develop
   source:
-    path: app-of-apps/applications
+    path: ./app-of-apps/applications
     repoURL: https://github.com/GA-MO/argocd-dev
     targetRevision: HEAD
     directory:

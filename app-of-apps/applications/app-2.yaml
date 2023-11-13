@@ -15,7 +15,7 @@ spec:
       targetRevision: 0.1.0
       helm:
         valueFiles:
-        - $values/app-of-apps/applications/app-2/values.yaml
+        - $values/app-of-apps/applications/values/values-app-2.yaml
     # Values from git
     - repoURL: https://github.com/GA-MO/argocd-dev
       targetRevision: HEAD

@@ -1,0 +1,20 @@
+metadata:
+  name: app-2
+  namespace: argocd
+spec:
+  destination:
+    namespace: dev
+    name: kind
+  project: default
+  sources:
+    # Chart template
+    - chart: web-site
+      repoURL: https://helm.github.io/examples
+      targetRevision: 0.1.0
+      helm:
+        valueFiles:
+        - $values/app-of-apps/applications/app-2/values.yaml
+    # Values from git
+    - repoURL: https://github.com/GA-MO/argocd-dev
+      targetRevision: HEAD
+      ref: values

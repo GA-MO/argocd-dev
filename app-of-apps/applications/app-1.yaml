@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: app-1
   namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: develop
@@ -22,3 +20,9 @@ spec:
     - repoURL: https://github.com/GA-MO/argocd-dev
       targetRevision: HEAD
       ref: values
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

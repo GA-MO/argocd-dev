@@ -5,13 +5,15 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: develop
+    namespace: argocd
   source:
-    path: app-of-apps/applications
     repoURL: https://github.com/GA-MO/argocd-dev
+    path: app-of-apps/applications
     targetRevision: HEAD
     directory: {}
   project: default
+  destination:
+    server: https://kubernetes.default.svc
   # syncPolicy:
   #   automated:
   #     prune: true

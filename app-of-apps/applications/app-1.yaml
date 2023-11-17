@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    server: in-cluster
+    name: in-cluster
     namespace: develop
   project: default
   source:

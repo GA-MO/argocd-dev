@@ -8,10 +8,6 @@ spec:
     name: in-cluster
     namespace: develop
   project: default
-  source:
-    repoURL: https://github.com/GA-MO/argocd-dev
-    path: app-of-apps/applications/app-2
-    targetRevision: HEAD
   sources:
     # Chart template
     - chart: hello-world

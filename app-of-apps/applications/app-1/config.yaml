@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/GA-MO/argocd-dev
-    path: app-of-apps/applications/app-1.yaml
+    path: app-of-apps/applications/app-1
     targetRevision: HEAD
   sources:
     # Chart template
@@ -19,7 +19,7 @@ spec:
       targetRevision: 0.1.0
       helm:
         valueFiles:
-        - $values/app-of-apps/applications/values/values-app-1.yaml
+        - $values/app-of-apps/applications/values/app-1/values.yaml
     # Values from git
     - repoURL: 'https://github.com/GA-MO/argocd-dev'
       targetRevision: HEAD

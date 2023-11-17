@@ -10,7 +10,8 @@ spec:
     repoURL: https://github.com/GA-MO/argocd-dev
     path: app-of-apps/applications
     targetRevision: HEAD
-    directory: {}
+    directory:
+      recurse: true
   project: default
   # syncPolicy:
   #   automated:

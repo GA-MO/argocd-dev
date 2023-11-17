@@ -17,8 +17,8 @@ spec:
       valueFiles:
       - $values/app-of-apps/applications/app-1/values.yaml
   # Values from git
-  - repoURL: 'https://github.com/GA-MO/argocd-dev'
-    targetRevision: HEAD
+  - repoURL: 'https://github.com/GA-MO/argocd-dev.git'
+    targetRevision: main
     ref: values
   syncPolicy:
     automated:

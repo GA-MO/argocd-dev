@@ -8,18 +8,13 @@ spec:
     name: in-cluster
     namespace: develop
   project: default
-  sources:
-    # Chart template
-    - chart: hello-world
-      repoURL: https://helm.github.io/examples
-      targetRevision: 0.1.0
-      helm:
-        valueFiles:
-        - $values/app-of-apps/applications/app-2/values.yaml
-    # Values from git
-    - repoURL: 'https://github.com/GA-MO/argocd-dev'
-      targetRevision: HEAD
-      ref: values
+  source:
+    chart: hello-world
+    repoURL: https://helm.github.io/examples
+    targetRevision: 0.1.0
+    helm:
+      valueFiles:
+        - https://github.com/GA-MO/argocd-dev/app-of-apps/applications/app-2/values.yaml
   syncPolicy:
     automated:
       prune: true

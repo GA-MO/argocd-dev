@@ -8,7 +8,7 @@ spec:
     namespace: develop
     name: kind
   project: default
-  source:
+  sources:
     # Chart template
     - chart: hello-world
       repoURL: https://helm.github.io/examples
@@ -17,7 +17,7 @@ spec:
         valueFiles:
         - $values/app-of-apps/applications/values/values-app-1.yaml
     # Values from git
-    - repoURL: https://github.com/GA-MO/argocd-dev
+    - repoURL: 'https://github.com/GA-MO/argocd-dev'
       targetRevision: HEAD
       ref: values
   syncPolicy:

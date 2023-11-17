@@ -8,6 +8,10 @@ spec:
     namespace: develop
     name: kind
   project: default
+  source:
+    repoURL: https://github.com/GA-MO/argocd-dev
+    path: app-of-apps/applications/app-1.yaml
+    targetRevision: HEAD
   sources:
     # Chart template
     - chart: hello-world

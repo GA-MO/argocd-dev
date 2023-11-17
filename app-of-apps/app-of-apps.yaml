@@ -12,8 +12,6 @@ spec:
     targetRevision: HEAD
     directory: {}
   project: default
-  destination:
-    server: https://kubernetes.default.svc
   # syncPolicy:
   #   automated:
   #     prune: true

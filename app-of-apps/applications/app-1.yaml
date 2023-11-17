@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
 spec:
   destination:
+    server: in-cluster
     namespace: develop
-    name: kind
   project: default
   source:
     repoURL: https://github.com/GA-MO/argocd-dev

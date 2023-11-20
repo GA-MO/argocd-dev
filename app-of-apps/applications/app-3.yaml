@@ -10,11 +10,11 @@ spec:
   project: default
   source:
     chart: hello-world
-    repoURL: https://helm.github.io/examples
+    repoURL: https://GA-MO.github.io/helm-chart
     targetRevision: 0.1.0
     helm:
       values: |
-        replicaCount: 3
+        replicaCount: 2
   syncPolicy:
     automated:
       prune: true

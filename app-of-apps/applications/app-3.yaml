@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-3
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: develop
+  project: default
+  source:
+    chart: hello-world
+    repoURL: https://helm.github.io/examples
+    targetRevision: 0.1.0
+    helm:
+      values: |
+        replicaCount: 3
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

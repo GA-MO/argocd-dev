@@ -1,25 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-1
+  name: app-2
   namespace: argocd
 spec:
   destination:
     name: in-cluster
     namespace: develop
   project: default
-  sources:
-  # Chart template
-  - repoURL: 'https://helm.github.io/examples'
+  source:
     chart: hello-world
+    repoURL: https://helm.github.io/examples
     targetRevision: 0.1.0
     helm:
-      valueFiles:
-      - $values/app-of-apps/applications/app-1/values.yaml
-  # Values from git
-  - repoURL: 'https://github.com/GA-MO/argocd-dev.git'
-    targetRevision: main
-    ref: values
+      values: |
+        replicaCount: 2
   syncPolicy:
     automated:
       prune: true

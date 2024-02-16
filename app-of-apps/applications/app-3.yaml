@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     chart: hello-world
-    repoURL: https://ga-mo.github.io/helm-chart/charts
+    repoURL: https://ga-mo.github.io/helm-chart
     targetRevision: 0.1.0
     helm:
       values: |
